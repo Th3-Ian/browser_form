@@ -1,0 +1,81 @@
+body,
+div,
+form,
+input,
+select,
+p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+h1 {
+  font: 32px Arial, sans-serif;
+  font-weight: 700;
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 800px;
+}
+
+form {
+  position: relative;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+  border-top: 2px solid rgb(62, 113, 190);
+}
+
+fieldset div {
+  padding: 20px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+fieldset div input,
+label {
+  width: 100%;
+}
+
+input {
+  align-self: center;
+  justify-self: center;
+  max-width: 200px;
+}
+
+input:invalid {
+  border: 2px solid rgb(134, 0, 0);
+  color: rgb(134, 0, 0);
+}
+
+button {
+  position: relative;
+  margin: 0 auto;
+  outline: none;
+  box-shadow: none;
+  padding: 12px 34px;
+  font: 24px Arial, sans-serif;
+  background-color: rgb(62, 113, 190);
+  color: white;
+  font-weight: 400;
+  border-radius: 16px;
+}
+
+button:hover {
+  background-color: rgb(37, 67, 112);
+}
