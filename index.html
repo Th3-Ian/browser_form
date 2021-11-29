@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <form action="/">
+      <form action="/" class="account-form" novalidate>
         <h1>Create a New Account</h1>
         <h3>Account Info</h3>
         <fieldset>
@@ -22,6 +22,7 @@
               required
               minlength="8"
             />
+            <span class="error" aria-live="polite"></span>
           </div>
           <div>
             <label for="country">Country</label
@@ -32,6 +33,7 @@
               required
               minlength="3"
             />
+            <span class="error" aria-live="polite"></span>
           </div>
           <div>
             <label for="zip">Zipcode</label
@@ -40,9 +42,11 @@
               name="zip"
               id="zipInput"
               required
+              pattern="^[0-9]*$"
               minlength="5"
               maxlength="5"
             />
+            <span class="error" aria-live="polite"></span>
           </div>
           <div>
             <label for="password">Password</label
@@ -52,8 +56,9 @@
               id="passwordInput"
               required
               minlength="8"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
             />
+            <span class="error" aria-live="polite"></span>
           </div>
           <div>
             <label for="password-confirm">Password Confirmation</label
@@ -64,6 +69,7 @@
               required
               minlength="8"
             />
+            <span class="error" aria-live="polite"></span>
           </div>
         </fieldset>
         <button type="submit" href="/">Submit</button>
